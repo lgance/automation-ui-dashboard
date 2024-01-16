@@ -7,18 +7,20 @@
   height:100%;
   width:100%;
 
-
-  @include tablet {
-      nav{
-        transform : translate(-260px);
-        transition: transform .25s ease-in-out;
-      }
-    
+  @include desktop {
+    nav{
+      transform : translate(0px) !important;
+    }
   }
 
   nav {
-    position:fixed;
-    height:100%;
+    position:fixed !important;
+    top:0 !important;
+    height:100% !important;
+    left:0 !important;
+    margin-right:0 !important;
+    margin-left: 0 !important;
+    
     block-size:100%;
     inline-size:260px;
     z-index:1003;
@@ -26,11 +28,14 @@
     flex-flow:column nowrap;
     inset-block-start: 0;
     inset-inline-start: 0;
-    transition:inline-size .25s ease-in-out,box-shadow .25s ease-in-out;
 
     will-change: transform,inline-size;
+
+    transform : translate(-260px);
     
     background-color:rgb(140, 119, 91);
+
+   
   }
 
   .layout_content_wrapper{
@@ -38,34 +43,89 @@
     flex-direction: column;
     flex-grow:1;
     min-block-size: 100dvh;
-    transition:padding-inline-start .2s ease-in-out;
+    // transition:padding-inline-start .2s ease-in-out;
 
     // default : auto 
     // 요소의 변화를 미리 브라우저에게 알려주어 브라우저가 미리 최적화함 
     will-change:padding-inline-start;
-  
+    padding-inline-start:0px;
+    padding-top:60px;
+
     @include desktop {
       padding-inline-start:260px;
+      
     }
 
-    @include tablet{
-      padding-inline-start:0;
+    header{
+      @include desktop{
+        left:260px;
+      }
+      position:fixed;
+      top:0;
+      right:0;
+      left:0;
+      border-radius:0.375rem;
+      z-index:1075;
 
-      background-color:green;
+      display:flex;
+      flex-flow:row nowrap;
+
+
+
+      padding:0 1.5rem;
+      
+      // height:3.875rem;
+      background-color:rgb(80, 52, 111);
+      color:white;
+
+
+      height:60px;
+
     }
 
-    @include mobile{
-      padding-inline-start:0;
-
-      background-color:yellow;
-    }
 
     main {
-      background-color:azure;
-    }
-    header{
-      background-color:brown;
-    }
+      display:flex;
+      align-items:stretch;
+      flex:1 1 auto;
+      justify-content:space-between;
+      flex-direction:column;
+      min-height:1px;
+      padding-bottom:0 !important;
 
+      box-sizing:border-box;
+
+
+      background-color:rgb(180, 200, 124);
+
+      .content{
+        display:block;
+        padding:0 1.5rem;
+        min-height:1px;
+        padding-top:1.5rem !important;
+        padding-bottom:1.5rem !important;
+        flex-grow:1 !important;
+        max-width:1440px;
+        width:100%;
+
+        margin-left:auto;
+        margin-right:auto;
+
+      }
+    }
+  
+
+
+
+    footer{
+      flex : 0 0 auto;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      min-height:1px;
+      height:40px;
+
+      background-color:cadetblue;
+    }
   }
 }

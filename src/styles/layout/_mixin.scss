@@ -3,21 +3,25 @@
 /*변수*/
 $red: #fa5252;
 
+
+
+// 480px 보다 작으면 
 @mixin mobile {
-  @media (max-width: #{$mobile}) {
+  @media (min-width: #{$phone_landscape_portrait}) and (max-width:$large_tablet_portrait) {
     @content;
   }
 }
-
+// 705
+// 768px이상 1279px 이하 
 @mixin tablet {
-  // @media (min-width: $tablet) and (max-width: $desktop) {
-    @media (max-width: #{$tablet}) {
+  @media (min-width: #{$large_tablet_portrait}) and (max-width:$desktop) {
     @content;
   }
 }
 
+// 1024px 이상 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: $desktop) {
     @content;
   }
 }
