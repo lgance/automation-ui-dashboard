@@ -1,0 +1,30 @@
+@import "_variables";
+
+/*변수*/
+$red: #fa5252;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  // @media (min-width: $tablet) and (max-width: $desktop) {
+    @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size){
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}

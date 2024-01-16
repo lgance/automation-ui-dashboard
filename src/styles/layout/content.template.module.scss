@@ -1,0 +1,71 @@
+@import "mixin";
+
+
+
+.app {
+  background-color:#B2EBF4;
+  height:100%;
+  width:100%;
+
+
+  @include tablet {
+      nav{
+        transform : translate(-260px);
+        transition: transform .25s ease-in-out;
+      }
+    
+  }
+
+  nav {
+    position:fixed;
+    height:100%;
+    block-size:100%;
+    inline-size:260px;
+    z-index:1003;
+    display:flex;
+    flex-flow:column nowrap;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    transition:inline-size .25s ease-in-out,box-shadow .25s ease-in-out;
+
+    will-change: transform,inline-size;
+    
+    background-color:rgb(140, 119, 91);
+  }
+
+  .layout_content_wrapper{
+    display:flex;
+    flex-direction: column;
+    flex-grow:1;
+    min-block-size: 100dvh;
+    transition:padding-inline-start .2s ease-in-out;
+
+    // default : auto 
+    // 요소의 변화를 미리 브라우저에게 알려주어 브라우저가 미리 최적화함 
+    will-change:padding-inline-start;
+  
+    @include desktop {
+      padding-inline-start:260px;
+    }
+
+    @include tablet{
+      padding-inline-start:0;
+
+      background-color:green;
+    }
+
+    @include mobile{
+      padding-inline-start:0;
+
+      background-color:yellow;
+    }
+
+    main {
+      background-color:azure;
+    }
+    header{
+      background-color:brown;
+    }
+
+  }
+}
