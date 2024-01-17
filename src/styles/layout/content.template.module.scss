@@ -43,7 +43,7 @@
     flex-direction: column;
     flex-grow:1;
     min-block-size: 100dvh;
-    // transition:padding-inline-start .2s ease-in-out;
+    transition:padding-inline-start .2s ease-in-out;
 
     // default : auto 
     // 요소의 변화를 미리 브라우저에게 알려주어 브라우저가 미리 최적화함 
