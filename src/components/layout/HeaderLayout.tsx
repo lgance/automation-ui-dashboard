@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import template from '@/styles/layout/content.template.module.scss';
 
 import {
   MenuUnfoldOutlined,
@@ -22,15 +23,17 @@ function HeaderLayout(){
   return (
     <>
       <header>
-          <Button type="primary" onClick={toggleCollapsed} >
-            {collapsed ? <MenuOutlined /> : <MenuOutlined /> }
-          </Button>
-        <div>
-
+        <div className={template.layout_menu_toggle}>
+          <MenuOutlined />
         </div>
-            <div>headerLayout</div>
-            <div>test</div>
-            https://demos.pixinvent.com/vuexy-html-admin-template/html/vertical-menu-template-semi-dark/app-ecommerce-dashboard.html
+
+
+        
+        <div className={template.layout_nav_right_area}>
+          <div>headerLayout</div>
+          https://demos.pixinvent.com/vuexy-html-admin-template/html/vertical-menu-template-semi-dark/app-ecommerce-dashboard.html
+        </div>
+
       </header>
      
     </>

@@ -70,6 +70,8 @@
       display:flex;
       flex-flow:row nowrap;
 
+      align-items:center;
+      justify-content:center;
 
 
       padding:0 1.5rem;
@@ -80,6 +82,19 @@
 
 
       height:60px;
+
+
+      .layout_menu_toggle{
+          display:block;
+          text-align: center;
+          margin-right:1rem !important;
+      }
+
+      .layout_nav_right_area{
+        display:flex;
+        flex-flow:row nowrap;
+        align-items:center;
+      }
 
     }
 
