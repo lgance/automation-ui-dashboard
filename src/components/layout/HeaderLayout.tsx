@@ -1,15 +1,15 @@
 'use client'
 
 import React, { useState } from 'react';
+import sass from '@/styles/layout/content.template.module.scss';
 
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  MenuOutlined
+  MenuOutlined,
+  SearchOutlined,
+  QuestionCircleOutlined
 } from '@ant-design/icons';
-
-import type { MenuProps } from 'antd';
-import { Button, Menu } from 'antd';
 
 function HeaderLayout(){
 
@@ -22,15 +22,17 @@ function HeaderLayout(){
   return (
     <>
       <header>
-          <Button type="primary" onClick={toggleCollapsed} >
-            {collapsed ? <MenuOutlined /> : <MenuOutlined /> }
-          </Button>
-        <div>
-
+        <div className={sass.layout_menu_toggle}>
+          <MenuOutlined />
         </div>
-            <div>headerLayout</div>
-            <div>test</div>
-            https://demos.pixinvent.com/vuexy-html-admin-template/html/vertical-menu-template-semi-dark/app-ecommerce-dashboard.html
+        <div className={sass.header_search_area} >
+          <SearchOutlined height={55} />
+        </div>
+
+        <div className={sass.header_right_area}>
+            <QuestionCircleOutlined />
+        </div>
+          
       </header>
      
     </>
