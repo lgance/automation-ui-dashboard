@@ -8,12 +8,12 @@
   width:100%;
 
   @include desktop {
-    nav{
+    aside{
       transform : translate(0px) !important;
     }
   }
 
-  nav {
+  aside {
     position:fixed !important;
     top:0 !important;
     height:100% !important;

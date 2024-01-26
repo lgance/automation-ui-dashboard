@@ -3,7 +3,7 @@ function NavLayout(){
   return (
     <>  
       <aside>
-          
+              ㄴㅇㅁㅇ
       </aside>
     </>
   ) 
