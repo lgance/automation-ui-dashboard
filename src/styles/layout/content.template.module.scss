@@ -33,9 +33,32 @@
 
     transform : translate(-260px);
     
-    background-color:rgb(140, 119, 91);
+    background-color:rgb(77, 51, 17);
 
+
+    color:white;
    
+    .aside_logo_box {
+        background-color:red;
+
+        height:40px;
+    }
+
+
+    .aside_menu_overflow{
+      height:calc( 100% - 70px );
+    }
+    .aside_menu_wrapper{
+      background-color:rgb(99, 189, 133);
+      overflow:auto;
+
+      padding:2px;
+
+    }
+
+    .aside_menu_footer{
+      height:30px;
+    }
   }
 
   .layout_content_wrapper{

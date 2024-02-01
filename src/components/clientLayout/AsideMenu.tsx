@@ -61,35 +61,14 @@ function AsideMenu(){
 
   return (
     <>  
-      <aside>
-        <div >
-            Aside Logo Box ARea 
-        </div>
-              
-        <div>
-          appmenu overflow 
-          <div>
-              app menu wrapper
-              <Menu
-                onClick={onClick}
-                style={{ width: 256 }}
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                mode="inline"
-                items={items}
-                />
-          </div>
-        </div>
-
-
-
-
-
-        <div>
-          Aside Footer 
-        </div>
-              
-      </aside>
+        <Menu
+          onClick={onClick}
+          style={{ width: "100%" }}
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          mode="inline"
+          items={items}
+          />
     </>
   ) 
 
